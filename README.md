@@ -66,4 +66,4 @@ ggplot(ga_pop_dat, aes(y = pct, x = Year, group = Race, linetype = Race)) +
   theme_dubois() + 
   coord_flip()
 ```
-<img src="figure/theme_dubois_ga_pop.png" width="400">
+<img src="man/figures/theme_dubois_ga_pop.png" width="400">
