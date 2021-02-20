@@ -1,6 +1,6 @@
 # themedubois
 
-Simple Theme for `ggplot2` Based on W.E.B. DuBois' Data Visualizations.
+Simple Theme for `ggplot2` Based on [W.E.B. Du Bois' Data Visualizations](https://www.smithsonianmag.com/history/first-time-together-and-color-book-displays-web-du-bois-visionary-infographics-180970826/).
 
 -----
 ## Install 
@@ -8,8 +8,7 @@ Simple Theme for `ggplot2` Based on W.E.B. DuBois' Data Visualizations.
 To install to from Github, use the **devtools** package,
 
 ```r
-library("devtools")
-install_github("vladmedenica/themedubois")
+devtools::install_github("vladmedenica/themedubois")
 ```
 ## Overview
 
