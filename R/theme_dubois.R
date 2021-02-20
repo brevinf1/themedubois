@@ -1,27 +1,34 @@
-#' Adds a custom ggplot2 theme
+#' A custom theme based on W.E.B. Du Bois' visualizations
 #'
-#' @return A ggplot2 object
+#' @return A ggplot2 plot
 #' @export
 #'
 #' @examples
-#'
-#'
-#' @inheritParams ggplot2
-#'
+#' For documentattion and examples please visit https://github.com/vladmedenica/themedubois
 theme_dubois <- function() {
 
   theme(text = element_text(family = "Jefferies"),
-        panel.background = element_rect(fill = "#e4d2c1",
-                                        colour = "#e4d2c1"),
-        panel.grid.major = element_line(colour="#dda58c"),
-        panel.grid.minor = element_blank(),
+        plot.title = element_text(size=20,
+                                  hjust = 0.5,
+                                  face = "plain",
+                                  margin = margin(0, 0, 1, 0, "cm")),
+        plot.subtitle = element_text(size=14,
+                                     hjust = 0.5,
+                                     face = "plain"),
         plot.background = element_rect(fill = "#e4d2c1"),
-        panel.border = element_rect(colour="#dda58c", fill=NA),
-        legend.position ="bottom",
-        plot.title = element_text(size=25, hjust = .5, face = "bold"),
-        plot.subtitle = element_text(size=16, hjust = .5, face = "plain"),
+        plot.margin = margin(1, 1.5, 1, 1.5, "cm"),
+        panel.background = element_rect(fill = "#e4d2c1",
+                                        color = "#e4d2c1"),
+        panel.border = element_rect(color = "#dda58c",
+                                    fill = NA),
+        panel.grid.major = element_line(color="#dda58c"),
+        panel.grid.minor = element_blank(),
         axis.ticks = element_blank(),
+        axis.text = element_text(color = "black"),
+        axis.title.x = element_text(margin = margin(0.5, 0, 0.5, 0, "cm")),
         legend.background = element_rect(fill = "#e4d2c1"),
-        legend.margin=margin(0, 0, 0, 0),
-        legend.key = element_rect(fill = "#e4d2c1", color = NA))
+        legend.position ="bottom",
+        legend.margin = margin(0, 0, 0, 0),
+        legend.key = element_rect(fill = "#e4d2c1", color = NA),
+        strip.background = element_rect(fill = "#e4d2c1", color = NA))
 }

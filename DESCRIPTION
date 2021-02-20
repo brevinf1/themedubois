@@ -6,7 +6,7 @@ Authors@R:
            family = "Medenica",
            role = c("aut", "cre"),
            email = "vlad.medenica@gmail.com")
-Description: Allows users to add a custom theme to their ggplot2 visualizations based on the data visualizations of W.E.B. Du Bois. .
+Description: Allows users to add a custom ggplot2 theme based on the data visualizations of W.E.B. Du Bois.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

@@ -2,17 +2,16 @@
 % Please edit documentation in R/theme_dubois.R
 \name{theme_dubois}
 \alias{theme_dubois}
-\title{Adds a custom ggplot2 theme}
+\title{A custom theme based on W.E.B. Du Bois' visualizations}
 \usage{
 theme_dubois()
 }
 \value{
-A ggplot2 object
+A ggplot2 plot
 }
 \description{
-Adds a custom ggplot2 theme
+A custom theme based on W.E.B. Du Bois' visualizations
 }
 \examples{
-
-
+For documentattion and examples please visit https://github.com/vladmedenica/themedubois
 }
