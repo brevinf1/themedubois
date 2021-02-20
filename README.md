@@ -1,6 +1,6 @@
 # themedubois
 
-Simple Theme for `ggplot`2 Based on W.E.B. DuBois' Data Visualizations.
+Simple Theme for `ggplot2` Based on W.E.B. DuBois' Data Visualizations.
 
 -----
 ## Install 
