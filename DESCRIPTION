@@ -1,18 +1,18 @@
 Package: themedubois
-Title: What the Package Does (One Line, Title Case)
+Title: Theme for ggplot2 Based on W.E.B. DuBois' Data Visualizations
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Vladimir Enrique",
+           family = "Medenica",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "vlad.medenica@gmail.com")
+Description: Allows users to add a custom theme to their ggplot2 visualizations based on the data visualizations of W.E.B. Du Bois. .
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 URL: https://github.com/vladmedenica/themedubois
 BugReports: https://github.com/vladmedenica/themedubois/issues
+Imports: 
+    ggplot2
