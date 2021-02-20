@@ -3,6 +3,15 @@
 Simple Theme for `ggplot`2 Based on W.E.B. DuBois' Data Visualizations.
 
 -----
+## Install 
+
+To install to from Github, use the **devtools** package,
+
+```r
+library("devtools")
+install_github("vladmedenica/themedubois")
+```
+## Overview
 
 This is a very focused package that provides typography-centric themes
 and theme components for ggplot2. It’s a an extract/riff of
@@ -32,4 +41,6 @@ Scales:
     palette
   - `scale_fill_dubois2`: Discrete color & fill scales based on the ipsum
     palette
-    
+ 
+ ## Examples
+
