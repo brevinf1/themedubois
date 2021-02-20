@@ -42,4 +42,28 @@ Scales:
     palette
  
  ## Examples
+ 
+```r
+# Load the tidytuesday package to access Du Bois data
+ library(tidytuesdayR)
+ 
+# Load and wrangle the GA population dataset
+ ga_pop_dat <- tt$georgia_pop %>% 
+  pivot_longer(-Year, names_to = "Race", values_to = "pct") %>% 
+  mutate(Race = glue::glue(" = {Race}"))
+
+# Replicate the line graph using theme_dubois()
+ggplot(ga_pop_dat, aes(y = pct, x = Year, group = Race, linetype = Race)) +
+  geom_line(size = 0.5) +
+  scale_y_reverse(breaks = seq(0, 100, 5),
+                  expand = c(0, 0)) +
+  scale_x_continuous(breaks = seq(1790, 1890, 10),
+                     expand = c(0, 0)) +
+  labs(linetype = NULL,
+       y = "Percent",
+       x = NULL,
+       title = "COMPARATIVE INCREASE OF WHITE AND COLORED\n POPULATION OF GEORGIA") +
+  theme_dubois() + 
+  coord_flip()
+```
 
