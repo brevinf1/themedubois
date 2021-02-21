@@ -13,5 +13,5 @@ scale_fill_dubois1 <- function(){
                "#dd374f",
                "#39518a",
                "#f1ac01")
-  scale_fill_manual(values = rev(colors1))
+  scale_fill_manual(values = colors1)
 }
