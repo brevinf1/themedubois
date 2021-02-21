@@ -154,7 +154,7 @@ mpg +
 ```
 <table>
   <tr>
-    <th>Original</th>
+    <th>Default theme_grey()</th>
     <th>Using theme_dubois()</th> 
   </tr>
   <tr>
