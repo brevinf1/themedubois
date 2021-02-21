@@ -133,3 +133,32 @@ ggplot(conjugal_data, aes(x = Percent, y = Population, fill = Status)) +
     <th><img src="man/figures/status_plot.png" width="400"></th>
   </tr>
 </table>
+
+### Example #3
+
+```r
+## The classic mtcars plot
+mpg <- ggplot(data = mtcars, mapping = aes(x = hp, y = mpg, color = fct_rev(factor(cyl)))) +
+       geom_point() +
+       geom_smooth(method = "lm", se = FALSE, 
+                   color = "black", size = 0.5) +
+       labs(title = "Everyone Loves \"mtcars\"",
+            color = "# of cylinders",
+            x = "Horsepower",
+            y = "Miles per gallon (mpg)")
+
+## Add Du Bois theme and color palette           
+mpg + 
+  scale_color_dubois2() +
+  theme_dubois()
+```
+<table>
+  <tr>
+    <th>Original</th>
+    <th>Using theme_dubois()</th> 
+  </tr>
+  <tr>
+    <th><img src="man/figures/mtcars_classic.png" width="400"></th>
+    <th><img src="man/figures/mtcars_dubois.png" width="400"></th>
+  </tr>
+</table>
