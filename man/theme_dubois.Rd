@@ -12,6 +12,3 @@ A ggplot2 plot
 \description{
 A custom theme based on W.E.B. Du Bois' visualizations
 }
-\examples{
-For documentattion and examples please visit https://github.com/vladmedenica/themedubois
-}

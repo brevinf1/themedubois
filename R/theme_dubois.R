@@ -3,8 +3,6 @@
 #' @return A ggplot2 plot
 #' @export
 #'
-#' @examples
-#' For documentattion and examples please visit https://github.com/vladmedenica/themedubois
 theme_dubois <- function() {
 
   theme(text = element_text(family = "Jefferies"),
