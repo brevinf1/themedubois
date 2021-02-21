@@ -6,11 +6,11 @@
 #'
 scale_fill_dubois1 <- function(){
   colors1 <- c("#dd374f",
+               "#efb64c",
                "#dbcbb7",
                "#9b9a94",
                "#a3a5b6",
                "#ba9a82",
-               "#efb64c",
                "#39518a",
                "#f1ac01")
   scale_fill_manual(values = colors1)
