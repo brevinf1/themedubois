@@ -16,9 +16,9 @@ library(themedubois)
 ```
 ## Overview
 
-Inspired by the excellent posts tagged [#DuBoisChallenge](https://twitter.com/search?q=%23DuBoisChallenge&src=typed_query) and Dr. Charlie Eaton's custom [Stata scheme](https://twitter.com/CharlieEatonPhD/status/1362882278230093824), this basic package offers a very simple ggplot2 theme that mimics the overall look of W.E.B. Du Bois' Data Portraits. 
+Inspired by the excellent posts tagged [#DuBoisChallenge](https://twitter.com/search?q=%23DuBoisChallenge&src=typed_query) and Dr. Charlie Eaton's custom [Stata scheme](https://twitter.com/CharlieEatonPhD/status/1362882278230093824), this basic package offers a very simple ggplot2 theme that mimics the overall look of W.E.B. Du Bois' Data Portraits. It serves as a starting point for R users who want to make Du Bois-inspired plots. 
 
-The core theme, `theme_dubois()`, is built using the [Jefferies](https://www.1001freefonts.com/jefferies.font) font, which can be downloaded and installed for free using the [`extrafonts`](https://github.com/wch/extrafont) package. This font is a rough, but nowhere near perfect, approximation of the font style used in Du Bois' original data portraits.
+The core theme, `theme_dubois()`, is built using the [Jefferies](https://www.1001freefonts.com/jefferies.font) font, which can be downloaded and installed for free and then imported into R using the [`extrafonts`](https://github.com/wch/extrafont) package. This font is a rough (and nowhere near perfect) approximation of the font style used in Du Bois' original data portraits.
 
 Also included are two color palettes, which can be accessed using the following functions:
 
