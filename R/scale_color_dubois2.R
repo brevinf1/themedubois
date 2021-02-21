@@ -1,3 +1,9 @@
+#' Short color palette (color)
+#'
+#' @return Color with short color palette
+#' @export
+#'
+#'
 scale_color_dubois2 <- function(){
   colors2 <- c("#e23653",
                "#fcb800",

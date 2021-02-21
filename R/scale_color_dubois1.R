@@ -1,3 +1,9 @@
+#' Long color palette (color)
+#'
+#' @return Color with long color palette
+#' @export
+#'
+#'
 scale_color_dubois1 <- function(){
   colors1 <- c("#dd374f",
                "#efb64c",
