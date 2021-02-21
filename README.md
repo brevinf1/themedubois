@@ -120,7 +120,8 @@ ggplot(conjugal_data, aes(x = Percent, y = Population, fill = Status)) +
   # adjust a few theme elements that are specific to this replication
   theme(legend.position = "top",
         panel.grid.major = element_blank(),
-        panel.border = element_blank())
+        panel.border = element_blank(),
+        plot.margin = margin(0.5, 2.25, 3, 2.25, "cm"))
 ```
 <table>
   <tr>
