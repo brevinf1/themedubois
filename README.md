@@ -120,7 +120,8 @@ ggplot(conjugal_data, aes(x = Percent, y = Population, fill = Status)) +
   # adjust a few theme elements that are specific to this replication
   theme(legend.position = "top",
         panel.grid.major = element_blank(),
-        panel.border = element_blank())
+        panel.border = element_blank(),
+        plot.margin = margin(0.5, 2.25, 3, 2.25, "cm"))
 ```
 <table>
   <tr>
@@ -130,5 +131,34 @@ ggplot(conjugal_data, aes(x = Percent, y = Population, fill = Status)) +
   <tr>
     <th><img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/challenge02/original-plate-10.jpg?raw=true" width="400"></th>
     <th><img src="man/figures/status_plot.png" width="400"></th>
+  </tr>
+</table>
+
+### Example #3
+
+```r
+## The classic mtcars plot
+mpg <- ggplot(data = mtcars, mapping = aes(x = hp, y = mpg, color = fct_rev(factor(cyl)))) +
+       geom_point() +
+       geom_smooth(method = "lm", se = FALSE, 
+                   color = "black", size = 0.5) +
+       labs(title = "Everyone Loves \"mtcars\"",
+            color = "# of cylinders",
+            x = "Horsepower",
+            y = "Miles per gallon (mpg)")
+
+## Add Du Bois theme and color palette           
+mpg + 
+  scale_color_dubois2() +
+  theme_dubois()
+```
+<table>
+  <tr>
+    <th>Original</th>
+    <th>Using theme_dubois()</th> 
+  </tr>
+  <tr>
+    <th><img src="man/figures/mtcars_classic.png" width="400"></th>
+    <th><img src="man/figures/mtcars_dubois.png" width="400"></th>
   </tr>
 </table>
