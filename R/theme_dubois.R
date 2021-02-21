@@ -30,5 +30,6 @@ theme_dubois <- function() {
         legend.position ="bottom",
         legend.margin = margin(0, 0, 0, 0),
         legend.key = element_rect(fill = "#e4d2c1", color = NA),
-        strip.background = element_rect(fill = "#e4d2c1", color = NA))
+        strip.background = element_rect(fill = "#e4d2c1", color = NA),
+        panel.spacing.y = unit(3, "lines"))
 }
