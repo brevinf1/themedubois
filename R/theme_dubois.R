@@ -28,6 +28,26 @@ theme_dubois <- function() {
         legend.position ="bottom",
         legend.margin = margin(0, 0, 0, 0),
         legend.key = element_rect(fill = "#e4d2c1", color = NA),
-        strip.background = element_rect(fill = "#e4d2c1", color = NA),
-        panel.spacing.y = unit(3, "lines"))
+        strip.background = element_rect(fill = "#e4d2c1", color = NA))
+}
+
+colors2 <- c("#e23653",
+             "#fcb800",
+             "#577565")
+
+scale_fill_dubois2 <- function(){
+  scale_fill_manual(values = rev(colors2), guide = guide_legend(reverse = TRUE))
+}
+
+colors1 <- c("#9b9a94",
+             "#a3a5b6",
+             "#ba9a82",
+             "#efb64c",
+             "#dbcbb7",
+             "#dd374f",
+             "#39518a",
+             "#f1ac01")
+
+scale_fill_dubois1 <- function(){
+  scale_fill_manual(values = rev(colors1))
 }
