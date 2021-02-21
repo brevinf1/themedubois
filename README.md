@@ -12,14 +12,14 @@ devtools::install_github("vladmedenica/themedubois")
 ```
 ## Overview
 
-Inspired by the [#DuBoisChallenge](https://twitter.com/search?q=%23DuBoisChallenge&src=typed_query) and Dr. Charlie Eaton's custom [Stata scheme](https://twitter.com/CharlieEatonPhD/status/1362882278230093824), this basic package offers a very simple ggplot2 theme that mimics the overall look of W.E.B. Du Bois' Data Portraits. 
+Inspired by the excellent posts tagged [#DuBoisChallenge](https://twitter.com/search?q=%23DuBoisChallenge&src=typed_query) and Dr. Charlie Eaton's custom [Stata scheme](https://twitter.com/CharlieEatonPhD/status/1362882278230093824), this basic package offers a very simple ggplot2 theme that mimics the overall look of W.E.B. Du Bois' Data Portraits. 
 
-The core theme, `theme_dubois()`, is built using [Jefferies](https://www.1001freefonts.com/jefferies.font) font, which can be downloaded and installed for free using the [`extrafonts`](https://github.com/wch/extrafont) package. This font is a rough, but nowhere near perfect, approximation of the font style used in Du Bois' original data portraits.
+The core theme, `theme_dubois()`, is built using the [Jefferies](https://www.1001freefonts.com/jefferies.font) font, which can be downloaded and installed for free using the [`extrafonts`](https://github.com/wch/extrafont) package. This font is a rough, but nowhere near perfect, approximation of the font style used in Du Bois' original data portraits.
 
 Also included are two color palettes, which can be accessed using the following functions:
 
-  - `scale_color_dubois1` & `scale_fill_dubois1`: Discrete color scale that includes a palatte of 7 colors inspired by [plate #25](https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/challenge07/original-plate-25.jpg?raw=true)
-  - `scale_color_dubois2` & `scale_fill_dubois2`: Discrete color scale that includes a palatte of 3 colors inspired by [plate #10](https://github.com/ajstarks/dubois-data-portraits/blob/master/plate10/original-plate-10.jpg?raw=true) 
+  - `scale_color_dubois1()` & `scale_fill_dubois1()`: Discrete color scale that includes a palatte of 7 colors inspired by [plate #25](https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/challenge07/original-plate-25.jpg?raw=true)
+  - `scale_color_dubois2()` & `scale_fill_dubois2()`: Discrete color scale that includes a palatte of 3 colors inspired by [plate #10](https://github.com/ajstarks/dubois-data-portraits/blob/master/plate10/original-plate-10.jpg?raw=true) 
     palette
  
  ## Examples
