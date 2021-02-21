@@ -12,7 +12,7 @@ devtools::install_github("vladmedenica/themedubois")
 ```
 ## Overview
 
-This is a very focused package that provides typography-centric themes
+This is a very basic package that provides typography-centric themes
 and theme components for ggplot2. It’s a an extract/riff of
 [`hrbrmisc`](https://github.com/hrbrmstr/hrbrmisc) created by request.
 
