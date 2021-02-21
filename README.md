@@ -121,7 +121,9 @@ ggplot(conjugal_data, aes(x = Percent, y = Population, fill = Status)) +
   theme(legend.position = "top",
         panel.grid.major = element_blank(),
         panel.border = element_blank(),
-        plot.margin = margin(0.5, 2.25, 3, 2.25, "cm"))
+        plot.margin = margin(0.5, 2.25, 3, 2.25, "cm"),
+        panel.spacing.y = unit(3, "lines"),
+        axis.text.x = element_blank())
 ```
 <table>
   <tr>
