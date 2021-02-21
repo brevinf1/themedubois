@@ -43,7 +43,7 @@ Scales:
  
  ## Examples
  
- # Example #1
+ ### Example #1
  
 ```r
 # Load the tidytuesday package to access Du Bois data
