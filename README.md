@@ -43,6 +43,8 @@ Scales:
  
  ## Examples
  
+ # Example #1
+ 
 ```r
 # Load the tidytuesday package to access Du Bois data
  library(tidytuesdayR)
@@ -69,7 +71,7 @@ ggplot(ga_pop_dat, aes(y = pct, x = Year, group = Race, linetype = Race)) +
 <table>
   <tr>
     <th>Original</th>
-    <th>Using `theme_dubois()`</th> 
+    <th>Using theme_dubois()</th> 
   </tr>
   <tr>
     <th><img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/challenge01/original-plate-07.jpg?raw=true" width="400"></th>
