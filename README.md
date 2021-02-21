@@ -98,7 +98,9 @@ conjugal_data <- tt$conjugal %>%
 ggplot(conjugal_data, aes(x = Percent, y = Population, fill = Status)) +
   # stack the columns
   geom_col(position = position_stack(),
-           width = 0.5) +
+           width = 0.5,
+           color = "black",
+           size = 0.1) +
   # add percentage labels
   geom_text(aes(label = pct_label), 
             position = position_stack(vjust = 0.5),
