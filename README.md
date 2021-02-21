@@ -66,8 +66,15 @@ ggplot(ga_pop_dat, aes(y = pct, x = Year, group = Race, linetype = Race)) +
   theme_dubois() + 
   coord_flip()
 ```
-Original
-<img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/challenge01/original-plate-07.jpg?raw=true" width="400">
-Using `theme_dubois()`
-<img src="man/figures/ga_plot.png" width="400">
+<table>
+  <tr>
+    <th>Original</th>
+    <th>Using `theme_dubois()`</th> 
+  </tr>
+  <tr>
+    <th><img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/challenge01/original-plate-07.jpg?raw=true" width="400"></th>
+    <th><img src="man/figures/ga_plot.png" width="400"></th>
+  </tr>
+</table>
+  
     
