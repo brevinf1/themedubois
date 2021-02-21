@@ -143,14 +143,14 @@ ggplot(conjugal_data, aes(x = Percent, y = Population, fill = Status)) +
 library(tidyverse)
 
 ## The classic mtcars plot
-mpg <- ggplot(data = mtcars, mapping = aes(x = hp, y = mpg, color = fct_rev(factor(cyl)))) +
-       geom_point() +
-       geom_smooth(method = "lm", se = FALSE, 
-                   color = "black", size = 0.5) +
-       labs(title = "Everyone Loves \"mtcars\"",
-            color = "# of cylinders",
-            x = "Horsepower",
-            y = "Miles per gallon (mpg)")
+mpg <- ggplot(data = mtcars, aes(x = hp, y = mpg, color = fct_rev(factor(cyl)))) +
+         geom_point() +
+         geom_smooth(method = "lm", se = FALSE, 
+                     color = "black", size = 0.5) +
+         labs(title = "Everyone Loves \"mtcars\"",
+              color = "# of cylinders",
+              x = "Horsepower",
+              y = "Miles per gallon (mpg)")
 
 ## Add Du Bois theme and color palette           
 mpg + 
