@@ -5,10 +5,14 @@ Simple Theme for `ggplot2` Based on [W.E.B. Du Bois' Data Visualizations](https:
 -----
 ## Install 
 
-To install from Github, use the **devtools** package,
+To install from Github, use the `devtools` package,
 
 ```r
+## Install package
 devtools::install_github("vladmedenica/themedubois")
+
+## Load package
+library(themedubois)
 ```
 ## Overview
 
@@ -29,9 +33,11 @@ Also included are two color palettes, which can be accessed using the following 
 ```r
 ## Load the tidytuesday package to access Du Bois data
  library(tidytuesdayR)
+ tt <- tt_load("2021-02-16")
  
-## Load tidyverse
+## Load tidyverse and themedubois packages
  library(tidyverse)
+ library(themedubois)
  
 ## Load and wrangle the GA population dataset
  ga_pop_dat <- tt$georgia_pop %>% 
@@ -73,9 +79,11 @@ ggplot(ga_pop_dat, aes(y = pct, x = Year, group = Race, linetype = Race)) +
 ```r
 ## Load the tidytuesday package to access Du Bois data
  library(tidytuesdayR)
-
-## Load tidyverse
-library(tidyverse)
+ tt <- tt_load("2021-02-16")
+ 
+## Load tidyverse and themedubois packages
+ library(tidyverse)
+ library(themedubois)
  
 ## Load and wrangle the conjugal dataset
 conjugal_data <- tt$conjugal %>% 
@@ -122,7 +130,7 @@ ggplot(conjugal_data, aes(x = Percent, y = Population, fill = Status)) +
   </tr>
   <tr>
     <th><img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/challenge02/original-plate-10.jpg?raw=true" width="400"></th>
-    <th><img src="man/figures/status_plot.png" width="400"></th>
+    <th><img src="man/figures/conjugal_plot.png" width="400"></th>
   </tr>
 </table>
 
