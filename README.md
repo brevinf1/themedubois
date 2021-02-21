@@ -5,40 +5,21 @@ Simple Theme for `ggplot2` Based on [W.E.B. Du Bois' Data Visualizations](https:
 -----
 ## Install 
 
-To install to from Github, use the **devtools** package,
+To install from Github, use the **devtools** package,
 
 ```r
 devtools::install_github("vladmedenica/themedubois")
 ```
 ## Overview
 
-This is a very basic package that provides typography-centric themes
-and theme components for ggplot2. It’s a an extract/riff of
-[`hrbrmisc`](https://github.com/hrbrmstr/hrbrmisc) created by request.
+Inspired by the [#DuBoisChallenge](https://twitter.com/search?q=%23DuBoisChallenge&src=typed_query) and Dr. Charlie Eaton's custom [Stata scheme](https://twitter.com/CharlieEatonPhD/status/1362882278230093824), this basic package offers a very simple ggplot2 theme that mimics the overall look of W.E.B. Du Bois' Data Portraits. 
 
-The core theme: `theme_ipsum` (“ipsum” is Latin for “precise”) uses
-Arial Narrow which should be installed on practically any modern system,
-so it’s “free”-ish. This font is condensed, has solid default kerning
-pairs and geometric numbers. That’s what I consider the “font trifecta”
-must-have for charts. An additional quality for fonts for charts is that
-they have a diversity of weights. Arial Narrow (the one on most systems,
-anyway) does not have said diversity but this quality is not (IMO) a
-“must have”.
+The core theme, `theme_dubois()`, is built using [Jefferies](https://www.1001freefonts.com/jefferies.font) font, which can be downloaded and installed for free using the [`extrafonts`](https://github.com/wch/extrafont) package. This font is a rough, but nowhere near perfect, approximation of the font style used in Du Bois' original data portraits.
 
-The following functions are implemented/objects are exported:
+Also included are two color palettes, which can be accessed using the following functions:
 
-Themes:
-
-  - `theme_dubois`: Uses the Jeffries font (https://www.1001freefonts.com/jefferies.font)
-
-Scales:
-
-  - `scale_color_dubois1`: Discrete color scale that includes a palatte of 7 colors based on plate # W.E.B Du Bois' 
-  - `scale_color_dubois2`: Discrete color & fill scales based on the ipsum
-    palette
-  - `scale_fill_dubois1`: Discrete color & fill scales based on the ipsum
-    palette
-  - `scale_fill_dubois2`: Discrete color & fill scales based on the ipsum
+  - `scale_color_dubois1` & `scale_fill_dubois1`: Discrete color scale that includes a palatte of 7 colors inspired by [plate #25](https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/challenge07/original-plate-25.jpg?raw=true)
+  - `scale_color_dubois2` & `scale_fill_dubois2`: Discrete color scale that includes a palatte of 3 colors inspired by [plate #10](https://github.com/ajstarks/dubois-data-portraits/blob/master/plate10/original-plate-10.jpg?raw=true) 
     palette
  
  ## Examples
@@ -46,26 +27,34 @@ Scales:
  ### Example #1
  
 ```r
-# Load the tidytuesday package to access Du Bois data
+## Load the tidytuesday package to access Du Bois data
  library(tidytuesdayR)
  
-# Load and wrangle the GA population dataset
+## Load tidyverse
+ library(tidyverse)
+ 
+## Load and wrangle the GA population dataset
  ga_pop_dat <- tt$georgia_pop %>% 
   pivot_longer(-Year, names_to = "Race", values_to = "pct") %>% 
   mutate(Race = glue::glue(" = {Race}"))
 
-# Replicate the line graph using theme_dubois()
+## Replicate the line graph using theme_dubois()
 ggplot(ga_pop_dat, aes(y = pct, x = Year, group = Race, linetype = Race)) +
   geom_line(size = 0.5) +
+  # reverse the y-axis and format breaks
   scale_y_reverse(breaks = seq(0, 100, 5),
                   expand = c(0, 0)) +
+  # format x-axis breaks
   scale_x_continuous(breaks = seq(1790, 1890, 10),
                      expand = c(0, 0)) +
+  # add plot title and labels
   labs(linetype = NULL,
        y = "Percent",
        x = NULL,
        title = "COMPARATIVE INCREASE OF WHITE AND COLORED\n POPULATION OF GEORGIA") +
+  # apply theme_dubois()
   theme_dubois() + 
+  # flip plot coordinates to match original
   coord_flip()
 ```
 <table>
@@ -84,6 +73,9 @@ ggplot(ga_pop_dat, aes(y = pct, x = Year, group = Race, linetype = Race)) +
 ```r
 ## Load the tidytuesday package to access Du Bois data
  library(tidytuesdayR)
+
+## Load tidyverse
+library(tidyverse)
  
 ## Load and wrangle the conjugal dataset
 conjugal_data <- tt$conjugal %>% 
@@ -137,6 +129,9 @@ ggplot(conjugal_data, aes(x = Percent, y = Population, fill = Status)) +
 ### Example #3
 
 ```r
+## Load tidyverse
+library(tidyverse)
+
 ## The classic mtcars plot
 mpg <- ggplot(data = mtcars, mapping = aes(x = hp, y = mpg, color = fct_rev(factor(cyl)))) +
        geom_point() +
@@ -154,7 +149,7 @@ mpg +
 ```
 <table>
   <tr>
-    <th>Original</th>
+    <th>Default theme_grey()</th>
     <th>Using theme_dubois()</th> 
   </tr>
   <tr>
